@@ -1,0 +1,121 @@
+ .App {
+  text-align: center;
+} 
+
+
+/* .title {
+  display: inline;
+  font-family: 'Barriecito', cursive;
+  font-size: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  color:#3A6BAC;
+  text-shadow: 2px 2px black;
+} */
+
+.landingBtn{
+  margin-left: 80%;
+  margin-right: 5%;
+}
+
+/* landing page image */
+.landingImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  height: auto;
+}
+
+.form{
+  display: block;
+  border: 1px solid #ccc;
+  margin-top: 5%;
+  box-sizing: border-box;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: 'Rock Salt', cursive;
+  background-color: white;
+  text-align: center;
+  padding: 3vw
+}
+
+/* .classBox {
+  margin-bottom: 15px;
+} */
+/* .container{
+  display: block;
+} */
+/* * {box-sizing: border-box} */
+
+/* Full-width input fields */ */
+  input[type=text], input[type=username] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 2px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+ button {
+  margin:  center;
+  background-color: #FFDC00;
+  color: black;
+  padding: 8px 20px;
+   margin: 4px 2px; 
+   border: none;
+  cursor: pointer;
+  width: 10vw;
+  opacity: 0.9;
+} 
+
+button:hover {
+  opacity:1;
+}
+
+
+/* Float cancel and signup buttons and add an equal width */ */
+ .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats */ */
+ .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+/* Connect Four board */
+.column {
+  float: left;
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+
