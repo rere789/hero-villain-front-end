@@ -7,17 +7,14 @@ import Card from  '../component/Card'
 
 
 class ConnectFour extends React.Component{
-    constructor(){
-        super()
-    }
-
+   
     render(){
         let badCard = this.props.cards.filter(card => card.alliance === "bad")
         let goodCard = this.props.cards.filter(card => card.alliance === "good")
         return(
             <div>
 
-                <header>Score Board
+                <header>
                     <ScoreBoard result={this.props.result} user={this.props.user}/>
                 </header>
                 <div>
