@@ -1,0 +1,8 @@
+{
+    "Cards": [
+        {"name": "Batman", "strength": "40", "speed": "29", "alliance": "good", "bio": "Gotham's Dark Knight", "special_move": "Bat-kick", "value": 6, "image": "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg"},
+        {"name": "Superman", "strength": "41", "speed": "28",  "alliance": "good", "bio": "Super strong man", "special_move": "Super Punch!", "value": 9, "image": "https://www.superherodb.com/pictures2/portraits/10/100/667.jpg"},
+        {"name": "Joker", "strength": "40", "speed": "29",  "alliance": "bad", "bio": "Gotham's Evil Kidder", "special_move": "Joke-kick", "value": 8, "image": "https://www.superherodb.com/pictures2/portraits/10/100/719.jpg"},
+        {"name": "Penguin", "strength": "40", "speed": "29", "alliance": "bad", "bio": "Greasy Bird man", "special_move": "Fish Punch!", "value": 9, "image": "https://www.superherodb.com/pictures2/portraits/10/100/753.jpg"}
+    ]
+}

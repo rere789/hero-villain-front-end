@@ -2,6 +2,11 @@
   text-align: center;
 } 
 
+.card{
+  width: 14rem;
+  
+}
+
 
 /* .title {
   display: inline;
@@ -107,15 +112,28 @@ button:hover {
 }
 
 /* Connect Four board */
-.column {
-  float: left;
+.row {
+  
 }
 
-.left, .right {
+.left  {
   width: 25%;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.right{
+  width: 25%;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .middle {
-  width: 50%;
+  width: 70%;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
