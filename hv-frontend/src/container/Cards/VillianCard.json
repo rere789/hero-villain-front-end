@@ -1,0 +1,6 @@
+{
+    "villians": [
+        {"name": "Joker", "strength": "40", "speed": "29",  "alliance": "good", "bio": "Gotham's Evil Kidder", "special_move": "Joke-kick", "value": 8, "image": "https://www.superherodb.com/pictures2/portraits/10/100/719.jpg"},
+        {"name": "Penguin", "strength": "40", "speed": "29", "alliance": "good", "bio": "Greasy Bird man", "special_move": "Fish Punch!", "value": 9, "image": "https://www.superherodb.com/pictures2/portraits/10/100/753.jpg"}
+    ]
+}

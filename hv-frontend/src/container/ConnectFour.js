@@ -18,13 +18,13 @@ class ConnectFour extends React.Component{
                 <div>
                 <div class="row">
                     <div className="column">
-                        <Card/>
+                        <HeroCard />
                     </div>
                     <div className="column">
-                        Game Board
+                        {/* <GameBoard /> */}
                     </div>
                     <div className="column">
-                        <Card/>
+                        <VillianCard/>
                     </div>
                     </div>
                 </div>
