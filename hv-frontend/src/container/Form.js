@@ -3,52 +3,46 @@ import Select from 'react-select';
 
 const alliance = [
     { label: "Super Hero", value: 1 },
-    { label: "Villain", value: 2 },
-
-]
+    { label: "Villain", value: 2 },]
 
 class Form extends React.Component{
-    constructor(props){
-        super(props)
-    }
-
-
+    
     render(){
         return(
             <section className="formBody">
             <div className="container">
-            <form action="action_page.php" className="form">
+            <form  className="form">
            
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
             <hr/>
-            <label for="username"><b>Username</b></label>
+            <label name="username"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="isNewUsername" required />
 
-            <label for="email"><b>Email</b></label>
+            <label name="email"><b>Email</b></label>
             <input type="text" placeholder="email" name="isNewEmail" required/>
 
             <Select options={ alliance } />
 
-            <div class="clearfix">
+            <div className="clearfix">
                 <button type="submit"  className="signupbtn">Sign Up</button>
                 </div>
     
            
         </form>
 
-            <form onSubmit={e => this.props.isLoggedIn(e)} action="action_page.php" className="form">
+            <form onSubmit={this.props.isLoggedIn} className="form">
            
             <h1>Log in</h1>
             <hr/>
-            <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" onChange={e => this.props.isUserName(e)} name="isUsername" required />
+            <label name="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" onChange={this.props.isUserName} name="isUsername" required />
 
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="email" onChange={e => this.props.isUserEmail(e)} name="isEmail" required/>
+            <label name="email"><b>Email</b></label>
+            <input type="text" placeholder="email" onChange={this.props.isUserEmail} name="isEmail" required/>
 
-            <div class="clearfix">
-                <button type="submit"  className="signupbtn">log in</button>
+            <div className="clearfix">
+                <button type="submit"  value="submit" >log in</button>
                 </div>
            
         </form>

@@ -5,6 +5,7 @@ import Form from './Form'
 class landing extends React.Component{
 
 render(){
+    console.log(this.props.isLoggedIn)
     return(
    
      <div>
@@ -14,7 +15,7 @@ render(){
          <button className="landingBtn" onClick={(e)=> this.props.onClick(e)}>Sign up/ log in</button>
             </header>
               
-             {this.props.clicked?  <Form  isUserEmail={this.props.isUserEmail} isUserName={this.props.isUserName} isLoggedIn={this.props.isLoggedIn} />  :  <img className="landingImg" src={cover}/>   }     
+             {this.props.clicked?  <Form isUserEmail={this.props.isUserEmail} isUserName={this.props.isUserName} isLoggedIn={this.props.isLoggedIn} />  :  <img className="landingImg" src={cover}/>   }     
             
     </div>   
     )
