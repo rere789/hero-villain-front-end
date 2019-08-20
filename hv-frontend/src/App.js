@@ -5,17 +5,28 @@ import ConnectFour from './container/ConnectFour';
 import Form from './container/Form';
 import Select from 'react-select';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import GameBoard from "../component/GameBoard";
+
+// import Card from './Card'
+
 
 class App extends React.Component{
     state= {
       clicked: false,
-      loggedIn: false
+      loggedIn: false,
+      
     }
 
   renderForm=(e)=>{
     console.log(e.target)
     this.setState({clicked: true})
   }
+
+  renderGame=(e)=>{
+    console.log('clicked')
+  }
+
+
 
 
   render(){
@@ -26,9 +37,10 @@ class App extends React.Component{
       :<Landing onClick={this.renderForm}/>}
       
       {this.state.loggedIn?
-        <ConnectFour />
+        <ConnectFour /> 
         : null}
       
+
     </div>
   );
   }
