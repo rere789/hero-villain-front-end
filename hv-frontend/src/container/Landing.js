@@ -1,5 +1,5 @@
 import React from "react"
-import cover from './pagecover.jpg
+import cover from './pagecover.jpg'
 import Form from './Form'
 
 class landing extends React.Component{
@@ -14,7 +14,7 @@ render(){
          <button className="landingBtn" onClick={(e)=> this.props.onClick(e)}>Sign up/ log in</button>
             </header>
               
-             {this.props.clicked?  <Form />  :  <img className="landingImg" src={cover}/>   }     
+             {this.props.clicked?  <Form  isUserEmail={this.props.isUserEmail} isUserName={this.props.isUserName} isLoggedIn={this.props.isLoggedIn} />  :  <img className="landingImg" src={cover}/>   }     
             
     </div>   
     )

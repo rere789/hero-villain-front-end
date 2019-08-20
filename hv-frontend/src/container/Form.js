@@ -31,24 +31,24 @@ class Form extends React.Component{
             <Select options={ alliance } />
 
             <div class="clearfix">
-                <button type="submit" onClick={this.props.isLoggedIn} className="signupbtn">Sign Up</button>
+                <button type="submit"  className="signupbtn">Sign Up</button>
                 </div>
     
            
         </form>
 
-            <form action="action_page.php" className="form">
+            <form onSubmit={e => this.props.isLoggedIn(e)} action="action_page.php" className="form">
            
             <h1>Log in</h1>
             <hr/>
             <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="isUsername" required />
+            <input type="text" placeholder="Enter Username" onChange={e => this.props.isUserName(e)} name="isUsername" required />
 
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="email" name="isEmail" required/>
+            <input type="text" placeholder="email" onChange={e => this.props.isUserEmail(e)} name="isEmail" required/>
 
             <div class="clearfix">
-                <button type="submit" onClick={this.props.isLoggedIn} className="signupbtn">log in</button>
+                <button type="submit"  className="signupbtn">log in</button>
                 </div>
            
         </form>
