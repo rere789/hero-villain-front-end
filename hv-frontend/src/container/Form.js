@@ -7,22 +7,25 @@ const alliance = [
 
 class Form extends React.Component{
     
+    
     render(){
         return(
             <section className="formBody">
             <div className="container">
-            <form  className="form">
+            <form  onSubmit={this.props.CreateUser} className="form">
            
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
             <hr/>
             <label name="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="isNewUsername" required />
+            <input onChange={this.props.isNewUserName} type="text" placeholder="Enter Username" name="isNewUsername" required />
 
             <label name="email"><b>Email</b></label>
-            <input type="text" placeholder="email" name="isNewEmail" required/>
+            <input onChange={this.props.isNewEmail} type="text" placeholder="email" name="isNewEmail" required/>
 
-            <Select options={ alliance } />
+            <Select onChange={this.props.isAlliance} options={ alliance } name="alliance">
+            </Select>
+
 
             <div className="clearfix">
                 <button type="submit"  className="signupbtn">Sign Up</button>

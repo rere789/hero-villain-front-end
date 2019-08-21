@@ -14,8 +14,12 @@ class App extends React.Component{
       loggedIn: false,
       isUserName: "",
       isEmail: "",
+      isAlliance: "",
       userResults: [],
       user: null,
+      isNewUser: "",
+      isNewEmail: "",
+      isNewAlliance: ""
     }
 
     componentDidMount(){
@@ -38,20 +42,31 @@ class App extends React.Component{
   }
 
   isUserName=(e)=>{
-    // (this.state.users.map(user => user.username).includes(e.target.value))?
     this.setState({isUserName: e.target.value}, () => console.log(this.state.isUserName))
-    // : alert("Not valid username")
+  }
+
+  isNewUserName=(e)=>{
+    this.setState({isNewUser: e.target.value})
+  }
+
+  isNewEmail=(e)=>{
+    this.setState({isNewEmail: e.target.value})
+  }
+
+  isAlliance=(e)=>{
+    console.log(e.label)
+    this.setState({isNewAlliance: e.label})
   }
 
   isUserEmail=(e)=>{
-    // (this.state.users.map(user => user.email).includes(e.target.value))?
     this.setState({isUserEmail: e.target.value})
-    // : alert("Not valid email")
-    // this.isLoggedIn()
+  }
+
+  createUser=(e)=>{
+    console.log(e.target.value)
   }
 
   isLoggedIn=(e)=>{
-
     e.preventDefault()
     fetch("http://localhost:3000/api/v1/login",{
       method: "POST",
@@ -68,17 +83,22 @@ class App extends React.Component{
         return null 
       }else 
       this.setState({ user: data.user, loggedIn: true})
-    }
-    
-    ) 
-    // 
+    }) 
+  }
 
-  //   this.setState({loggedIn: true})
-  //   let currentUser = this.state.users.filter(u => u.username === this.state.isUserName)
-  //   console.log("app", currentUser)
-  //   let id = currentUser.id
-  //  let isUserResults = this.state.results.filter(result => result.user_id === id)
-  //   this.setState({userResults: isUserResults, user: currentUser, loggedIn: true})
+  isCreateNewUser=(e)=>{
+    e.preventDefault()
+    fetch("http://localhost:3000/api/v1/users",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        'accept': "application/json"
+      }, 
+      body: JSON.stringify({
+        username: this.state.isNewUser, email: this.state.isNewEmail, alliance: this.state.isNewAlliance})
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
   }
 
 
@@ -86,15 +106,13 @@ class App extends React.Component{
   return (
     <div className="App">
      
-      
       {this.state.loggedIn?
         <War result={this.state.userResults} user={this.state.user} cards={this.state.cards}/> 
-        : <Landing users={this.state.users} isLoggedIn={this.isLoggedIn} isUserEmail={this.isUserEmail} isUserName={this.isUserName} onClick={this.renderForm} clicked={this.state.clicked}/>}
-      
-
+        : <Landing users={this.state.users} isLoggedIn={this.isLoggedIn} isUserEmail={this.isUserEmail} 
+              isNewEmail={this.isNewEmail} isNewUserName={this.isNewUserName} isAlliance={this.isAlliance}
+              isUserName={this.isUserName} onClick={this.renderForm} clicked={this.state.clicked}/>}
     </div>
-  );
-  }
+  )}
 }
 
 export default App;

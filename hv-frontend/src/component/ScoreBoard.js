@@ -7,11 +7,13 @@ class ScoreBoard extends React.Component{
         return(
             <div>
                <div class="container">
-                <div class="jumbotron">
-                <h1>Super Hero's vs Vilains</h1> 
-                <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-                responsive, mobile-first projects on the web.</p> 
+               
+                <h1 className="scoreheader" >Super Hero's vs Vilains</h1> 
+                <hr/>
+                <div><h4>Wins</h4>
+                <h4>Losses</h4>
                 </div>
+                
                 </div>
             </div>
         )

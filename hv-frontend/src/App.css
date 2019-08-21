@@ -3,12 +3,27 @@
 } 
 
 .card{
-  width: 14rem;
-  
+  margin: 0 auto;
+  width: 19rem;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  line-height: normal;
+  box-shadow: 10px 10px #888888;
 }
 
-.jumbotron{
-  font-family: 'Chewy', cursive;
+.card-body{
+  background-color: lightslategrey;
+  color: white;
+}
+
+.card-img-top{
+  height: 20vw;
+  width: 10%;
+}
+
+.scoreheader{
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 5.4vw;
+  text-shadow: 2px 2px #ff0000;
 }
 
 /* .title {
@@ -45,7 +60,7 @@
   font-family: 'Rock Salt', cursive;
   background-color: white;
   text-align: center;
-  padding: 3vw
+  padding: 3vw;
 }
 
 /* .classBox {
@@ -115,28 +130,30 @@ button:hover {
 }
 
 /* Connect Four board */
-.row {
+.grid {
+  display: grid;
+  height: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 40vw;
+}
+
+.item1 {
   
+  grid-column: 1;
 }
 
-.left  {
-  width: 25%;
-  display: block;
-    margin-left: auto;
-    margin-right: auto
+.item2 {
+  
+  grid-column: 2;
 }
 
-.right{
-  width: 25%;
-  display: block;
-    margin-left: auto;
-    margin-right: auto
+.item3 {
+  
+  grid-column:  3;
 }
 
-.middle {
-  width: 70%;
-  display: block;
-    margin-left: auto;
-    margin-right: auto
+.pow{
+  width: 35vw;
+  height: 100%;
 }
 

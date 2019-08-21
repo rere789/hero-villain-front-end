@@ -18,14 +18,14 @@ class ConnectFour extends React.Component{
                     <ScoreBoard result={this.props.result} user={this.props.user}/>
                 </header>
                 <div>
-                <div className="row">
-                    <div className="column">
+                <div className="grid">
+                    <div className="item1">
                         <Card card={goodCard[Math.floor(Math.random()*goodCard.length)]}/>
                     </div>
-                    <div className="column">
-                        <img src={"https://s3-media1.fl.yelpcdn.com/bphoto/1Nu5WzGl1fWg7XltzkZRfQ/ls.jpg"}/>
+                    <div className="item2">
+                        <img className="pow" src={"https://previews.123rf.com/images/yayasyaya/yayasyaya1605/yayasyaya160500007/58039643-comic-book-page-divided-by-lines-with-speech-bubbles-rocket-hero-and-sounds-effect-retro-background-.jpg"}/>
                     </div>
-                    <div className="column">
+                    <div className="item3">
                         <Card card={badCard[Math.floor(Math.random()*badCard.length)]}/>
                     </div>
                     </div>
@@ -33,6 +33,7 @@ class ConnectFour extends React.Component{
             </div>
         )
     }
+
 
 
 
